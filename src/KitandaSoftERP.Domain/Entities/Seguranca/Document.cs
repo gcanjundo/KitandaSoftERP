@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace KitandaSoftERP.Domain.Entities.Seguranca
 {
-    public class Document : BaseEntity
+    public abstract class Document : BaseEntity
     {
         public int DocumentID { get; set; }
         public string Link { get; set; }
