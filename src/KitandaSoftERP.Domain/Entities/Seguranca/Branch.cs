@@ -1,6 +1,8 @@
 ﻿using KitandaSoftERP.Domain.Entities.Academica;
+using KitandaSoftERP.Domain.Entities.Comercial;
 using KitandaSoftERP.Domain.Entities.Geral;
 using KitandaSoftERP.Domain.Entities.Shared;
+using KitandaSoftERP.Domain.Entities.Stock;
 using System;
 using System.Collections.Generic;
 
@@ -17,7 +19,8 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public DateTime InapemLastUpdate { get; set; }
         public virtual TaxGroup TaxGroup { get; set; }
         public virtual Branch Company { get; set; }
-        public virtual AcademicSettings AcademicSettings { get; set; } 
+        public virtual AcademicSettings AcademicSettings { get; set; }
+        
         public virtual ICollection<AcademicYear> AcademicYearList { get; set; }
         public virtual ICollection<StudentRegistration> StudentRegistrationList { get; set; }
         public virtual ICollection<Student> StudentsList { get; set; }
@@ -26,6 +29,8 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public virtual ICollection<CurrentSession> SessionsList { get; set; }
         public virtual ICollection<UserProfileBranch> UserProfileBranchesList { get; set; }
         public virtual ICollection<EmailMonitor> EmailsList { get; set; }
+        public virtual ICollection<Product> ProductList { get; set; }
+        public virtual ICollection<Warehouse> WarehouseList { get; set; }
 
         public Branch()
         {

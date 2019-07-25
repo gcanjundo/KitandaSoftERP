@@ -4,9 +4,9 @@ using System.Linq;
 namespace KitandaSoftERP.Domain.Entities.Comercial
 {
 
-    public class ComercialDocuments : BaseEntity
+    public class CommercialDocuments : BaseEntity
     {
-        public ComercialDocuments()
+        public CommercialDocuments()
         {
 
         }

@@ -1,20 +1,14 @@
 ﻿using KitandaSoftERP.Domain.Entities.Shared;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace KitandaSoftERP.Domain.Entities.Geral
+namespace KitandaSoftERP.Domain.Entities.Comercial
 {
-    public class Category  : BaseEntity
+    public class TablePrice : BaseEntity
     {
+        
         public override bool IsValid()
         {
             return !ErrorList.Any();
         }
-
-
     }
-
-
 }
