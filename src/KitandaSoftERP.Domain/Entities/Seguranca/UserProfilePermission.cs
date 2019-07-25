@@ -1,6 +1,7 @@
 ﻿
 
 using KitandaSoftERP.Domain.Entities.Shared;
+using KitandaSoftERP.Domain.Shared.ValueObject;
 using System.Linq;
 
 namespace KitandaSoftERP.Domain.Entities.Seguranca
@@ -13,18 +14,14 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public int ProfileID { get; set; }
         public virtual Profile Profile { get; set; } 
         public int UserID { get; set; }
-        public virtual User User { get; set; } 
-        public bool AllowInsert { get; set; } 
-        public bool AllowEdit { get; set; } 
-        public int AllowDelete { get; set; } 
-        public int AllowSelect { get; set; } 
-        public int AllowPrint { get; set; }  
-        public int Allowed { get; set; }
+        public virtual User User { get; set; }
+        public Permission Permission { get; set; }
         public UserProfilePermission()
         {
             Page = new Page();
             User = new User();
             Profile = new Profile();
+            Permission = new Permission();
         }
         public override bool IsValid()
         {

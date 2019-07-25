@@ -1,9 +1,9 @@
 ﻿using KitandaSoftERP.Domain.Entities.Shared;
 using System;
 
-namespace KitandaSoftERP.Domain.Entities.Comercial
+namespace KitandaSoftERP.Domain.Entities.Stock
 {
-    public class SerialCommercialDocuments : BaseEntity
+    public class WarehousePermission : BaseEntity
     {
         public override bool IsValid()
         {
