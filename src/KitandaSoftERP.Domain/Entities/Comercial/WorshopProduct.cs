@@ -4,8 +4,11 @@ using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Comercial
 {
-    public class ProductComposed:Product
+    public class WorshopProduct: Product
     {
-        public int ComposeID { get; set; } 
+        public WorshopProduct():base()
+        {
+
+        }
     }
 }

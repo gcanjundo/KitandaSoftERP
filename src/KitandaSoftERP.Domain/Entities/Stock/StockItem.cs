@@ -10,11 +10,11 @@ namespace KitandaSoftERP.Domain.Entities.Stock
           
         public int StockItemProductID { get; set; }
         public int StockItemWarehouseID { get; set; }
-        public int StockItemSalesUnitofMeasureID { get; set; }
-        public int StockItemPurchaseUnitofMeasureID { get; set; }
-        public int StockItemStorageUnitofMeasureID { get; set; }
-        public int StockItemIncomeUnitofMeasureID { get; set; }
-        public int StockItemOutcomeUnitofMeasureID { get; set; }
+        public int StockItemSalesUnitOfMeasureID { get; set; }
+        public int StockItemPurchaseUnitOfMeasureID { get; set; }
+        public int StockItemStorageUnitOfMeasureID { get; set; }
+        public int StockItemIncomeUnitOfMeasureID { get; set; }
+        public int StockItemOutcomeUnitOfMeasureID { get; set; }
         public bool StockItemRuptureStockAlert { get; set; }
         public decimal StockItemProductQuantity { get; set; }
         public decimal StockItemCurrentQuantity { get; set; }
@@ -27,8 +27,13 @@ namespace KitandaSoftERP.Domain.Entities.Stock
         public decimal StockItemLastPriceCost { get; set; }
         public virtual Product StockItemProduct { get; set; }
         public virtual Warehouse StockItemWarehouse { get; set; }
+        public virtual UnitOfMeasure StockItemPurchaseUnitOfMeasure { get; set; }
+        public virtual UnitOfMeasure StockItemSalesUnitOfMeasure { get; set; }
+        public virtual UnitOfMeasure StockItemStorageUnitOfMeasure { get; set; }
+        public virtual UnitOfMeasure StockItemIncomeUnitOfMeasure { get; set; }
+        public virtual UnitOfMeasure StockItemOutComeUnitOfMeasure { get; set; }
 
-        public StockItem()
+        public StockItem():base()
         {
             StockItemProduct = new Product();
             StockItemWarehouse = new Warehouse();

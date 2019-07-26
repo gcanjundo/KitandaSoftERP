@@ -25,7 +25,7 @@ namespace KitandaSoftERP.Domain.Entities.Shared
         public bool Deleted { get; set; }
         public string DeletedBy { get; set; }
         public string DeletedDate { get; set; } 
-        public List<string> ErrorList { get; set;}
+        public List<string> ErrorList { get; set;} 
         public abstract bool IsValid();
     }
 }

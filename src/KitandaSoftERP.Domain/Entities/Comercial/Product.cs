@@ -1,4 +1,6 @@
-﻿using KitandaSoftERP.Domain.Entities.Seguranca;
+﻿using KitandaSoftERP.Domain.Entities.Academica;
+using KitandaSoftERP.Domain.Entities.Contabilidade;
+using KitandaSoftERP.Domain.Entities.Seguranca;
 using KitandaSoftERP.Domain.Entities.Shared;
 using KitandaSoftERP.Domain.Entities.Stock;
 using System;
@@ -15,12 +17,13 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public string PhotoPath { get; set; }
         public byte[] Photo { get; set; }
         public string ProductType { get; set; }
-        public int UnitMensureBaseID { get; set; }
+        public int UnitOfMensureBaseID { get; set; }
         public int TaxID { get; set; }
         public int MarkID { get; set; }
         public decimal PriceCost { get; set; }
-        public bool MoveStock { get; set; }
+        public decimal SalesPrice { get; set; }
         public decimal ProfitMargin { get; set; }
+        public bool MoveStock { get; set; } 
         public DateTime ValidateDate { get; set; }
         public decimal Weight { get; set; }
         public decimal Height { get; set; }
@@ -52,19 +55,33 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public string ComposeType { get; set; }
         public decimal ComposePrice { get; set; }
         public bool IsExternal { get; set; }
-        public int ExternalEntity { get; set; }
+        public int ExternalEntityID { get; set; }
         public bool OnlyByOrder { get; set; }
         public int SetupTime { get; set; }
         public int AccountPlanSalesID { get; set; }
         public int AccountPlanPurchaseID { get; set; }
-        public int AccountPlanStockID { get; set; }
+        public int AccountPlanStockItemID { get; set; }
         public int AccountPlanPurchaseRefundID { get; set; }
         public int AccountPlanSalesRefundID { get; set; }
+        
         public virtual ProductCategory ProductCategory { get; set; }
         public virtual Branch Branch { get; set; }
-        public virtual StockItem StockItem { get; set; }
+        public virtual Entity ExternalEntity { get; set; }
+        public virtual UnitOfMeasure UnitOfMensureBase { get; set; }
+        public virtual StockItem StockItem { get; set; } 
         public virtual ICollection<ProductPriceList> PriceList { get; set; }
         public virtual ICollection<SalesInvoiceLines> SalesInvoiceLines { get; set; }
+
+        public Product()
+        {
+            ProductCategory = new ProductCategory();
+            Branch = new Branch();
+            ExternalEntity = new Entity();
+            UnitOfMensureBase = new UnitOfMeasure();
+            StockItem = new StockItem();
+            PriceList = new HashSet<ProductPriceList>();
+            SalesInvoiceLines = new HashSet<SalesInvoiceLines>();
+        }
         public override bool IsValid()
         {
             return !ErrorList.Any();

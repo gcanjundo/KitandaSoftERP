@@ -14,6 +14,14 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public decimal FinalSalesPrice { get; set; }
         public decimal ProfitMargin { get; set; }
 
+        public virtual Product Product { get; set; }
+        public virtual TablePrice TablePrice { get; set; }
+
+        public ProductPriceList()
+        {
+            Product = new Product();
+            TablePrice = new TablePrice();
+        }
         public override bool IsValid()
         {
             return !ErrorList.Any();

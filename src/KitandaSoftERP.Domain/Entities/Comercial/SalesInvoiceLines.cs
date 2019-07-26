@@ -51,6 +51,13 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public virtual Product Product { get; set; }
         public virtual Warehouse Warehouse { get; set; }
 
+        public SalesInvoiceLines()
+        {
+            SalesInvoice = new SalesInvoice();
+            Product = new Product();
+            Warehouse = new Warehouse();
+
+        }
         public override bool IsValid()
         {
             return !ErrorList.Any();

@@ -4,12 +4,13 @@ using System.Linq;
 
 namespace KitandaSoftERP.Domain.Entities.Comercial
 {
-    public class TablePrice : BaseEntity
+    public class StatusPayment:BaseEntity
     {
-        public virtual ICollection<ProductPriceList> ProductPriceList { get; set; }
-        public TablePrice()
+        public virtual ICollection<SalesInvoice> SalesInvoiceList { get; set; }
+
+        public StatusPayment()
         {
-            ProductPriceList = new HashSet<ProductPriceList>();
+            SalesInvoiceList = new HashSet<SalesInvoice>();
         }
         public override bool IsValid()
         {

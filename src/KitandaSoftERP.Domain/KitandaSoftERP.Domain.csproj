@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Entities\Compras\" />
     <Folder Include="Entities\Clinica\" />
-    <Folder Include="Entities\Contabilidade\" />
     <Folder Include="Entities\RecursosHumanos\" />
     <Folder Include="Entities\Oficina\" />
     <Folder Include="Entities\Tesouraria\" />

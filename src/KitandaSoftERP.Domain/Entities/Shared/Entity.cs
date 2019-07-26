@@ -1,5 +1,6 @@
 ﻿
 using KitandaSoftERP.Domain.Entities.Academica;
+using KitandaSoftERP.Domain.Entities.Comercial;
 using KitandaSoftERP.Domain.Entities.Seguranca;
 using KitandaSoftERP.Domain.Shared.ValueObject;
 using System;
@@ -30,7 +31,10 @@ namespace KitandaSoftERP.Domain.Entities.Shared
         public string WhatsAppNumber { get; set; }
         public string PhotoPath { get; set; }
         public byte[] Photo { get; set; } 
-        public virtual ICollection<User> Users { get; set; } 
+        public virtual ICollection<User> UsersList { get; set; }
+        public virtual ICollection<Product> ExternalEntityList { get; set; }
+        public virtual EntityPerson EntityPerson { get; set; }
+        public virtual EntityEnterprise EntityEnterprise { get; set; }
         public override bool IsValid()
         {
             return !ErrorList.Any();
