@@ -1,12 +1,10 @@
 ﻿using KitandaSoftERP.Domain.Entities.Shared;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Academica
 {
-   
+
 
     public class ClassRoomDirector:BaseEntity
     {

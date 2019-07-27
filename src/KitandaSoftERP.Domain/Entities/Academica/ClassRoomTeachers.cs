@@ -13,8 +13,8 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         }
 
         public int ClassRoomID { get; set; }
-        public int TeacherID { get; set; }
         public int CurricularUnitID { get; set; } 
+        public int TeacherID { get; set; }
         public virtual ClassRoom ClassRoom { get; set; }
         public virtual Teacher Teacher { get; set; }
         public virtual CurricularUnit CurricularUnit { get; set; }

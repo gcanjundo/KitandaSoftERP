@@ -9,9 +9,9 @@ namespace KitandaSoftERP.Domain.Entities.Academica
     {
         public Coordenation()
         {
-            Courses = new HashSet<Course>();
+            CoursesList = new HashSet<Course>();
         }
-        public virtual ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Course> CoursesList { get; set; }
         public override bool IsValid()
         {
             return !ErrorList.Any();

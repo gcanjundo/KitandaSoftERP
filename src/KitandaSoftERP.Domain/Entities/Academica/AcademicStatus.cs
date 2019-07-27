@@ -7,7 +7,7 @@ namespace KitandaSoftERP.Domain.Entities.Academica
     public class AcademicStatus : BaseEntity
     {
         
-        public virtual ICollection<StudentRegistration> StudentRegistrations { get; set; }
+        public virtual ICollection<StudentRegistration> StudentRegistrationList { get; set; }
         public AcademicStatus()
         {
             StudentRegistrations = new HashSet<StudentRegistration>();

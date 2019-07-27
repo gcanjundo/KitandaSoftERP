@@ -48,7 +48,7 @@ namespace KitandaSoftERP.Infra.Data.Context
         // ACADEMIC TABLES
         public DbSet<AcademicPeriod> AcademicPeriods { get; set; }
         public DbSet<AcademicStatus> AcademicStatus { get; set; }
-        public DbSet<AcademicYear> AcademicYears { get; set; }
+        public DbSet<AcademicYear > AcademicYears { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<ClassRoom> ClassesRoom { get; set; }
         public DbSet<ClassRoomDirector> ClassesRoomDirector { get; set; }

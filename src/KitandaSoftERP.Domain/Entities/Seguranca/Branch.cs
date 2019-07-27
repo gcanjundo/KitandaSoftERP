@@ -21,7 +21,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public virtual Branch Company { get; set; }
         public virtual AcademicSettings AcademicSettings { get; set; }
         
-        public virtual ICollection<AcademicYear> AcademicYearList { get; set; }
+        public virtual ICollection<AcademicYear > AcademicYearList { get; set; }
         public virtual ICollection<StudentRegistration> StudentRegistrationList { get; set; }
         public virtual ICollection<Student> StudentsList { get; set; }
         public virtual ICollection<Candidate> CandidatesList { get; set; }
@@ -37,7 +37,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
             TaxGroup = new TaxGroup();
             Company = new Branch();
             AcademicSettings = new AcademicSettings();
-            AcademicYearList = new HashSet<AcademicYear>();
+            AcademicYearList = new HashSet<AcademicYear >();
             StudentRegistrationList = new HashSet<StudentRegistration>();
             BranchesList = new HashSet<Branch>();
             SessionsList = new HashSet<CurrentSession>();
