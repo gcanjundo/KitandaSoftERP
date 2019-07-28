@@ -1,4 +1,5 @@
 ﻿
+using KitandaSoftERP.Domain.Entities.Comercial;
 using KitandaSoftERP.Domain.Entities.Shared;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public virtual Profile UserProfile { get; set; }
         public virtual ICollection<UserProfileBranch> UserProfileBranchesList { get; set; }
         public virtual ICollection<UserProfilePermission> UserProfilePermissionsList { get; set; }
+        public virtual CashRegister CashRegister { get; set; }
 
         public User()
         {
@@ -25,6 +27,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
             UserProfile = new Profile();
             UserProfileBranchesList = new HashSet<UserProfileBranch>();
             UserProfilePermissionsList = new HashSet<UserProfilePermission>();
+            CashRegister = new CashRegister();
 
         }
         public override bool IsValid()

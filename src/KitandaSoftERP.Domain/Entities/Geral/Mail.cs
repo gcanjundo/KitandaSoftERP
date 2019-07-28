@@ -6,7 +6,7 @@ using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Geral
 {
-    public class Correspondencia:BaseEntity
+    public class Mail: BaseEntity
     { 
         public string InternalReference { get; set; }
         public string ExternaRefence { get; set; }

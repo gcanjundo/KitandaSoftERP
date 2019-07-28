@@ -26,6 +26,7 @@ namespace KitandaSoftERP.Domain.Entities.Stock
         public virtual ICollection<StockItem> StockItemList { get; set; }
         public virtual ICollection<SalesInvoice> SalesInvoiceList { get; set; }
         public virtual ICollection<SalesInvoiceLines> SalesInvoiceLines { get; set; }
+        public virtual ICollection<CashRegister> CashRegisterList { get; set; }
 
         public Warehouse()
         {
@@ -34,6 +35,7 @@ namespace KitandaSoftERP.Domain.Entities.Stock
             StockItemList = new HashSet<StockItem>();
             SalesInvoiceList = new HashSet<SalesInvoice>();
             SalesInvoiceLines = new HashSet<SalesInvoiceLines>();
+            CashRegisterList = new HashSet<CashRegister>();
         }
         
         public override bool IsValid()

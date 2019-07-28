@@ -14,11 +14,13 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public DateTime SerialCommercialDocumentFinalDate { get; set; }
         public int LastNumber { get; set; } 
         public virtual ICollection<SalesInvoice> SalesInvoiceList { get; set; }
-        public virtual Document SerialCommercialDocumentType { get; set; } 
+        public virtual Document SerialCommercialDocumentType { get; set; }
+        public virtual ICollection<CashRegister> CashRegisterList { get; set; }
         public SerialCommercialDocuments():base()
         {
             SalesInvoiceList = new HashSet<SalesInvoice>();
             SerialCommercialDocumentType = new CommercialDocuments();
+            CashRegisterList = new HashSet<CashRegister>();
         }
         public override bool IsValid()
         {

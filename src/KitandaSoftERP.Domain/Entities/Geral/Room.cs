@@ -7,6 +7,8 @@ namespace KitandaSoftERP.Domain.Entities.Geral
 {
     public class Room : BaseEntity
     {
+        public int Lotation { get; set; }
+        public string Type { get; set; }
         public virtual ICollection<ClassRoom> ClassesRoom { get; set; }
         public Room()
         {

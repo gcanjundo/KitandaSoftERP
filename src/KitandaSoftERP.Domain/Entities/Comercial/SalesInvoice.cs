@@ -62,7 +62,10 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public bool SalesInvoiceAGTSent { get; set; }
         public string SalesInvoiceAGTSentBy { get; set; }
         public DateTime SalesInvoiceAGTSentDate { get; set; }
-        public bool SalesInvoiceSourceBilling { get; set; } 
+        public bool SalesInvoiceSourceBilling { get; set; }
+        public decimal PenaltyPercentage { get; set; }
+        public decimal PenaltiesAmount { get; set; }
+
         public virtual Customer SalesInvoiceCustomer { get; set; }
         public virtual PaymentTerms SalesInvoicePaymentTerms { get; set; }
         public virtual SerialCommercialDocuments SalesInvoiceSerialDocument { get; set; }
@@ -71,7 +74,9 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public virtual StatusDocument SalesInvoiceStatusDocment { get; set; }
         public virtual StatusPayment SalesInvoiceStatusPayment { get; set; }
         public virtual Currency SalesInvoiceCurrency { get; set; }  
-        public ICollection<SalesInvoiceLines> SalesInvoicesLines { get; set; }
+        public virtual ICollection<SalesInvoiceLines> SalesInvoicesLines { get; set; }
+        public virtual CommercialDocuments SalesInvoiceOriginTypeDocument { get; set; }
+        public virtual FeeManagementBillingSchedule FeeManagementBillingSchedule { get; set; }
 
         public SalesInvoice()
         {
@@ -83,6 +88,7 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
             SalesInvoiceStatusDocment = new StatusDocument();
             SalesInvoiceStatusPayment = new StatusPayment();
             SalesInvoiceCurrency = new Currency();
+            FeeManagementInvoice = new FeeManagementBillingSchedule();
         }
         public override bool IsValid()
         {

@@ -10,7 +10,7 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         public virtual ICollection<StudentRegistration> StudentRegistrationList { get; set; }
         public AcademicStatus()
         {
-            StudentRegistrations = new HashSet<StudentRegistration>();
+            StudentRegistrationList = new HashSet<StudentRegistration>();
         }
         public override bool IsValid()
         {

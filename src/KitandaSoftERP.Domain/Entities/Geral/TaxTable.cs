@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace KitandaSoftERP.Domain.Entities.Geral
 {
-    public class TaxGroup : BaseEntity
+    public class TaxTable : BaseEntity
     {
         public string TaxType { get; set; }
         public string TaxCountryRegion { get; set; }

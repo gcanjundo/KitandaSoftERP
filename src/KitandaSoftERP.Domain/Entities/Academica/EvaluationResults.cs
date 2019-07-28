@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace KitandaSoftERP.Domain.Entities.Academica
 {
-    public class EvaluationResults : BaseEntity
+    public class EvaluationResult : BaseEntity
     {
         public int StudentID { get; set; } 
         public int ClassRoomID { get; set; }

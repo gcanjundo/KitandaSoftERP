@@ -4,7 +4,7 @@ using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Comercial
 {
-    public class ClinicalProduct:Product
+    public class CashRegisterMoviment
     {
 
     }

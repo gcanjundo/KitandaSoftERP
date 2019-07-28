@@ -17,7 +17,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public decimal SocialCapital { get; set; }
         public DateTime InapemRegistration { get; set; }
         public DateTime InapemLastUpdate { get; set; }
-        public virtual TaxGroup TaxGroup { get; set; }
+        public virtual TaxTable TaxGroup { get; set; }
         public virtual Branch Company { get; set; }
         public virtual AcademicSettings AcademicSettings { get; set; }
         
@@ -34,7 +34,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
 
         public Branch()
         {
-            TaxGroup = new TaxGroup();
+            TaxGroup = new TaxTable();
             Company = new Branch();
             AcademicSettings = new AcademicSettings();
             AcademicYearList = new HashSet<AcademicYear >();

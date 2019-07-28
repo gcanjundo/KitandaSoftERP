@@ -8,7 +8,10 @@ namespace KitandaSoftERP.Domain.Entities.Academica
     {
         public int StudentID { get; set; }
         public int RelatedPersonID { get; set; }
-        public int RelationshipID { get; set; } 
+        public int RelationshipID { get; set; }
+        public string WorkPlace { get; set; }
+        public string WorkAddress { get; set; }
+        public string WorkPhone { get; set; }
         public virtual Student Student { get; set; }
         public virtual EntityPerson RelatedPerson { get; set; }
         public virtual RelationshipType RelationShip { get; set; }

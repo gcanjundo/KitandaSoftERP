@@ -12,6 +12,7 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public int ProductID { get; set; }
         public decimal Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+        public decimal DiscountPercentage { get; set; }
 
         public virtual FeeManagement FeeManagement { get; set; }
         public virtual Product Product { get; set; }
