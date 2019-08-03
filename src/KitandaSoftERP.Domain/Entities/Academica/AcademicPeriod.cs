@@ -14,11 +14,11 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         public DateTime Terminate { get; set; }
         public DateTime RegistrationBegin { get; set; }
         public DateTime RegistrationTerminate { get; set; }
-        public virtual AcademicYear AcademicYear { get; set; }
-        public virtual ICollection<CurricularUnit> CurricularUnits { get; set; }
+        public virtual AcademicYear  AcademicYear { get; set; }
+        public virtual ICollection<CurricularUnit> CurricularUnitsList { get; set; }
         public AcademicPeriod()
         {
-            CurricularUnits = new HashSet<CurricularUnit>();
+            CurricularUnitsList = new HashSet<CurricularUnit>();
         }
         public override bool IsValid()
         {

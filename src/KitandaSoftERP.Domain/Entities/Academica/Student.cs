@@ -32,9 +32,7 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         public virtual EntityPerson Mother { get; set; }
         public virtual Entity EducationSponsor { get; set; } 
         public virtual ICollection<StudentCardID> StudentCardList { get; set; }
-        public virtual ICollection<StudentRegistration> StudentRegistrationList { get; set; }
-
-        public 
+        public virtual ICollection<StudentRegistration> StudentRegistrationList { get; set; } 
         public override bool IsValid()
         {
             ConfirmaValidacaoEmail();

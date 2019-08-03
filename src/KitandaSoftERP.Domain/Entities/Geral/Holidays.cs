@@ -7,8 +7,7 @@ namespace KitandaSoftERP.Domain.Entities.Geral
     public class Holidays: BaseEntity
     {
         public int Day { get; set; }
-        public int Mounth { get; set; }
-        public string DayMonth { get; set; }
+        public int Mounth { get; set; } 
 
         public override bool IsValid()
         {

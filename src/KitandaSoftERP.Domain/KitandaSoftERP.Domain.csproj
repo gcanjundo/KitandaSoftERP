@@ -6,12 +6,40 @@
 
   <ItemGroup>
     <Folder Include="Entities\Compras\" />
-    <Folder Include="Entities\Clinica\" />
-    <Folder Include="Entities\Contabilidade\" />
-    <Folder Include="Entities\RecursosHumanos\" />
-    <Folder Include="Entities\Oficina\" />
-    <Folder Include="Entities\Tesouraria\" />
-    <Folder Include="Entities\Stock\" />
+    <Folder Include="Entities\Restaurant\" />
+    <Folder Include="Interfaces\Repository\Academica\" />
+    <Folder Include="Interfaces\Repository\Comercial\" />
+    <Folder Include="Interfaces\Repository\Compras\" />
+    <Folder Include="Interfaces\Repository\Contabilidade\" />
+    <Folder Include="Interfaces\Repository\HumanResources\" />
+    <Folder Include="Interfaces\Repository\Restaurant\" />
+    <Folder Include="Interfaces\Repository\Treasure\" />
+    <Folder Include="Interfaces\Repository\Worshop\" />
+    <Folder Include="Interfaces\Services\Academica\" />
+    <Folder Include="Interfaces\Services\Comercial\" />
+    <Folder Include="Interfaces\Services\Compras\" />
+    <Folder Include="Interfaces\Services\Contabilidade\" />
+    <Folder Include="Interfaces\Services\HumanResources\" />
+    <Folder Include="Interfaces\Services\Worshop\" />
+    <Folder Include="Interfaces\Services\Seguranca\" />
+    <Folder Include="Interfaces\Services\Restaurant\" />
+    <Folder Include="Interfaces\Services\Treasure\" />
+    <Folder Include="Services\Academica\" />
+    <Folder Include="Services\Comercial\" />
+    <Folder Include="Services\Compras\" />
+    <Folder Include="Services\Contabilidade\" />
+    <Folder Include="Services\HumanResources\" />
+    <Folder Include="Services\Restaurant\" />
+    <Folder Include="Services\Seguranca\" />
+    <Folder Include="Services\Treasure\" />
+    <Folder Include="Services\Worshop\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

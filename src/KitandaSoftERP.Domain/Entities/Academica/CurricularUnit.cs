@@ -36,7 +36,7 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         public virtual Discipline Discipline { get; set; }
         public virtual CurricularYear CurricularYear { get; set; }
         public virtual UnitClassification UnitClassification { get; set; }
-        public virtual AcademicYear AcademicYear { get; set; }  
+        public virtual AcademicYear  AcademicYear { get; set; }  
         public virtual AcademicPeriod AcademicPeriod { get; set; }
 
         public CurricularUnit()

@@ -22,7 +22,7 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         public int MaxDays { get; set; }
         public int ColectiveClassRoomID { get; set; }
         public virtual CurricularYear CurricularYear { get; set; } 
-        public virtual AcademicYear AcademicYear { get; set; }
+        public virtual AcademicYear  AcademicYear { get; set; }
         public virtual Room Room { get; set; }
         public virtual ClassRoom ColectiveClassRoom { get; set; } 
         public virtual ICollection<ClassRoom> ClassesRoomList { get; set; }
@@ -33,7 +33,7 @@ namespace KitandaSoftERP.Domain.Entities.Academica
         public ClassRoom()
         {
             CurricularYear = new CurricularYear();
-            AcademicYear = new AcademicYear();
+            AcademicYear = new AcademicYear ();
             Room = new Room();
             ColectiveClassRoom = new ClassRoom();
             ClassesRoomList = new HashSet<ClassRoom>();
