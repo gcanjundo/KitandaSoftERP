@@ -2,6 +2,7 @@
 using KitandaSoftERP.Domain.Entities.Shared;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Comercial
@@ -30,10 +31,20 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public virtual SerialCommercialDocuments DocumentSerial { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual CommercialDocuments OriginDocumentType { get; set; }
+        public virtual ICollection<CustomerReceiptInvoices> CustomerReceiptInvoicesList { get; set; }
 
+        public CustomerReceipt()
+        {
+            Tax = new TaxTable();
+            Currency = new Currency();
+            DocumentSerial = new SerialCommercialDocuments();
+            Customer = new Customer();
+            OriginDocumentType = new CommercialDocuments();
+            CustomerReceiptInvoicesList = new HashSet<CustomerReceiptInvoices>();
+        }
         public override bool IsValid()
         {
-            throw new NotImplementedException();
+            return ErrorList.Any();
         }
     }
 }

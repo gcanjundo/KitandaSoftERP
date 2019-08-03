@@ -14,6 +14,7 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
         public DateTime SerialCommercialDocumentFinalDate { get; set; }
         public int LastNumber { get; set; } 
         public virtual ICollection<SalesInvoice> SalesInvoiceList { get; set; }
+        public virtual FiscalYear FiscalYear { get; set; }
         public virtual Document SerialCommercialDocumentType { get; set; }
         public virtual ICollection<CashRegister> CashRegisterList { get; set; }
         public SerialCommercialDocuments():base()
@@ -21,6 +22,7 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
             SalesInvoiceList = new HashSet<SalesInvoice>();
             SerialCommercialDocumentType = new CommercialDocuments();
             CashRegisterList = new HashSet<CashRegister>();
+            FiscalYear = new FiscalYear();
         }
         public override bool IsValid()
         {

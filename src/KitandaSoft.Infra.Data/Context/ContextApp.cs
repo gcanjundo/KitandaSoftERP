@@ -64,10 +64,9 @@ namespace KitandaSoftERP.Infra.Data.Context
         public DbSet<BloodGroup> BloodGroup { get; set; }
         public DbSet<BusinessActivity> BusinessActivity { get; set; }
         public DbSet<City> City { get; set; }
-        public DbSet<CitzenDocument> CitzenDocument { get; set; }
+        public DbSet<CitizenDocument> CitzenDocument { get; set; }
         public DbSet<Commune> Commune { get; set; }
-        public DbSet<Contacts> Contacts { get; set; }
-        public DbSet<ContactType> ContactType { get; set; }
+         
         public DbSet<Country> Country { get; set; }
         public DbSet<Currency> Currency { get; set; }
         public DbSet<Commune> Departament { get; set; }
@@ -92,6 +91,7 @@ namespace KitandaSoftERP.Infra.Data.Context
         public DbSet<CommercialDocuments> CommercialDocuments { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<FeeManagement> FeeManagement { get; set; }
+        public DbSet<FeeManagementBillingSchedule> FeeManagementBillingSchedule { get; set; }
         public DbSet<FeeManagementItems> FeeManagementItems { get; set; }
         public DbSet<PaymentTerms> PaymentTerms { get; set; }
         public DbSet<Product> Product { get; set; }
@@ -139,7 +139,7 @@ namespace KitandaSoftERP.Infra.Data.Context
         public ContextApp Create(string pConnectionString)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ContextApp>();
-            optionsBuilder.UseMySql(pConnectionString);
+            optionsBuilder.UseMySql(pConnectionString).UseLazyLoadingProxies();
 
             //Ensure database creation
             var context = new ContextApp(optionsBuilder.Options);
@@ -149,7 +149,7 @@ namespace KitandaSoftERP.Infra.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            
         }
     }
 }

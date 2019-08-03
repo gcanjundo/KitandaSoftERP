@@ -88,7 +88,7 @@ namespace KitandaSoftERP.Domain.Entities.Comercial
             SalesInvoiceStatusDocment = new StatusDocument();
             SalesInvoiceStatusPayment = new StatusPayment();
             SalesInvoiceCurrency = new Currency();
-            FeeManagementInvoice = new FeeManagementBillingSchedule();
+            FeeManagementBillingSchedule = new FeeManagementBillingSchedule();
         }
         public override bool IsValid()
         {

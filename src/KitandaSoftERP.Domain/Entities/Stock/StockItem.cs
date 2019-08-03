@@ -6,8 +6,7 @@ using System.Text;
 namespace KitandaSoftERP.Domain.Entities.Stock
 {
     public class StockItem
-    {
-          
+    { 
         public int StockItemProductID { get; set; }
         public int StockItemWarehouseID { get; set; }
         public int StockItemSalesUnitOfMeasureID { get; set; }
@@ -32,11 +31,20 @@ namespace KitandaSoftERP.Domain.Entities.Stock
         public virtual UnitOfMeasure StockItemStorageUnitOfMeasure { get; set; }
         public virtual UnitOfMeasure StockItemIncomeUnitOfMeasure { get; set; }
         public virtual UnitOfMeasure StockItemOutComeUnitOfMeasure { get; set; }
+        public virtual ICollection<ProductLots> ProductLotsList { get; set; }
+        public virtual ICollection<ProductSerialNumbers> ProductSerialNumbersList { get; set; }
 
         public StockItem():base()
         {
             StockItemProduct = new Product();
             StockItemWarehouse = new Warehouse();
+            StockItemPurchaseUnitOfMeasure = new UnitOfMeasure();
+            StockItemSalesUnitOfMeasure = new UnitOfMeasure();
+            StockItemStorageUnitOfMeasure = new UnitOfMeasure();
+            StockItemIncomeUnitOfMeasure = new UnitOfMeasure();
+            StockItemOutComeUnitOfMeasure = new UnitOfMeasure();
+            ProductLotsList = new HashSet<ProductLots>();
+            ProductSerialNumbersList = new HashSet<ProductSerialNumbers>();
         }
     }
 }

@@ -5,8 +5,17 @@ using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Stock
 {
-    public class ProductSerialNumbers: Product
+    public class ProductSerialNumbers: StockItem
     {
+        public int SerialStockItemID { get; set; }
+        public string SerialNumber { get; set; }
+        public virtual StockItem SerialStockItem { get; set; }
+
+        public ProductSerialNumbers() : base()
+        {
+            SerialStockItem = new StockItem();
+        }
+
 
     }
 }

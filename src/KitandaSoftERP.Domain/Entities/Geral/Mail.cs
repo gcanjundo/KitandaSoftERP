@@ -18,7 +18,7 @@ namespace KitandaSoftERP.Domain.Entities.Geral
         public DateTime ReceivedDate { get; set; }
         public string ReceptorName { get; set; }
         public string Subject { get; set; }  
-        public string Status { get; set; }
+        //public string Status { get; set; }
         public int RecipientDepartamentID { get; set; }
         public string Barcode { get; set; }
         public string PathFile { get; set; }

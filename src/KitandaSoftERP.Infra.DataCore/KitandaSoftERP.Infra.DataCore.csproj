@@ -5,14 +5,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Mapping\" />
+    <Folder Include="DBModels\" />
+    <Folder Include="EntitiesConfiguration\Academica\" />
+    <Folder Include="EntitiesConfiguration\Comercial\" />
+    <Folder Include="EntitiesConfiguration\Compras\" />
+    <Folder Include="EntitiesConfiguration\Contabilidade\" />
+    <Folder Include="EntitiesConfiguration\HumanResources\" />
+    <Folder Include="EntitiesConfiguration\Restaurant\" />
+    <Folder Include="EntitiesConfiguration\Treasure\" />
+    <Folder Include="EntitiesConfiguration\Worshop\" />
+    <Folder Include="Repository\Academica\" />
+    <Folder Include="Repository\Comercial\" />
+    <Folder Include="Repository\Compras\" />
+    <Folder Include="Repository\Contabilidade\" />
+    <Folder Include="Repository\HumanResources\" />
+    <Folder Include="Repository\Restaurant\" />
+    <Folder Include="Repository\Seguranca\" />
+    <Folder Include="Repository\Treasure\" />
+    <Folder Include="Repository\Worshop\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KitandaSoftERP.Domain\KitandaSoftERP.Domain.csproj" />
   </ItemGroup>
 
 </Project>

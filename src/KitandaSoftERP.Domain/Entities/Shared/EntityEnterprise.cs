@@ -7,8 +7,8 @@ using System.Linq;
 namespace KitandaSoftERP.Domain.Entities.Shared
 {
     public class EntityEnterprise : Entity
-    {   
-        public int EnterpriseID { get; set; }   
+    {
+        public string CommercialName { get; set; }
         public string EnterpriseCommericalRegistration { get; set; }
         public int EnterpriseBusinessActivityID { get; set; }
         public virtual BusinessActivity EnterpriseBusinessActivity { get; set; }

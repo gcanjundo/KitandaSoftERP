@@ -10,8 +10,7 @@ using System.Linq;
 namespace KitandaSoftERP.Domain.Entities.Comercial
 {
     public class Product : BaseEntity
-    {
-        public int ProductID { get; set; }
+    { 
         public string ProductReference { get; set; }
         public int ProductCategoryID { get; set; }
         public string PhotoPath { get; set; }

@@ -10,7 +10,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
     {
         public int UserProfilePermissionID { get; set; }
         public int PageID { get; set; } 
-        public virtual Page Page { get; set; } 
+        public virtual SystemPages  Page { get; set; } 
         public int ProfileID { get; set; }
         public virtual Profile Profile { get; set; } 
         public int UserID { get; set; }
@@ -18,7 +18,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public Permission Permission { get; set; }
         public UserProfilePermission()
         {
-            Page = new Page();
+            Page = new SystemPages ();
             User = new User();
             Profile = new Profile();
             Permission = new Permission();
