@@ -15,10 +15,13 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public int TAG { get; set; } 
         public int Indice { get; set; } 
         public string Imagem { get; set; } 
-        public virtual ICollection<UserProfilePermission> UserProfilePermissionsList { get; set; }
+        public virtual ICollection<UserProfilePermission> UserPermissionsList { get; set; }
+        public virtual ICollection<UserProfilePermission> ProfilePermissionsList { get; set; }
         public SystemPages ()
         {
-            UserProfilePermissionsList = new HashSet<UserProfilePermission>();
+            Module = new SystemModule();
+            ProfilePermissionsList = new HashSet<UserProfilePermission>();
+            UserPermissionsList = new HashSet<UserProfilePermission>();
         }
         public override bool IsValid()
         {

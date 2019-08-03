@@ -1,4 +1,5 @@
 ﻿using KitandaSoftERP.Domain.Entities.Academica;
+using KitandaSoftERP.Domain.Entities.Contabilidade;
 using KitandaSoftERP.Domain.Entities.MedicalManagement;
 using KitandaSoftERP.Domain.Entities.Shared;
 using KitandaSoftERP.Domain.Entities.Worshop;
@@ -9,12 +10,16 @@ using System.Text;
 
 namespace KitandaSoftERP.Domain.Entities.Comercial
 {
-    public class Customer : Entity
+    public class Customer : ComercialEntity
     {
         public int CustomerGroupID { get; set; }
+        public int? TablePriceID { get; set; }
+        public int? CustomerAccountPlanID { get; set; }
         public virtual CustomerGroup CustomerGroup { get; set; }
         public virtual Patient Patient { get; set; }
         public virtual Student Student { get; set; }
+        public virtual TablePrice TablePrice { get; set; }
+        public virtual GeneralAccountPlan CustomerAccountPlan { get; set; }
         public ICollection<SalesInvoice> SalesInvoicesList { get; set; }
         public ICollection<CustomerReceipt> CustomerReceiptsList { get; set; }
         public ICollection<FeeManagementBillingSchedule> FeeManagementBillingScheduleList { get; set; }

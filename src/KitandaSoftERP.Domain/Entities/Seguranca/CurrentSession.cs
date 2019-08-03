@@ -16,6 +16,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public DateTime LogoutTime { get; set; }
         public string UserLogged { get; set; }
         public string CurrentPassword { get; set; }
+        public int BranchID { get; set; }
         public virtual Branch Branch { get; set; }
 
         public CurrentSession()

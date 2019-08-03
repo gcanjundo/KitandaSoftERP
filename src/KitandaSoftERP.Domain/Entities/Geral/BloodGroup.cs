@@ -14,6 +14,11 @@ namespace KitandaSoftERP.Domain.Entities.Geral
         }
         public override bool IsValid()
         {
+            if (string.IsNullOrEmpty(Designation))
+                ErrorList.Add("A Designação do Grupo Sanguíneo é obrigatória");
+            if (string.IsNullOrEmpty(ShortName))
+                ErrorList.Add("Informe o Grupo Sanguíneo");
+
             return !ErrorList.Any();
         }
     }

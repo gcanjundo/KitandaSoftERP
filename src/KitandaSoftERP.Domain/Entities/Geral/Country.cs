@@ -29,6 +29,9 @@ namespace KitandaSoftERP.Domain.Entities.Geral
         }
         public override bool IsValid()
         {
+            if (string.IsNullOrEmpty(Designation))
+                ErrorList.Add("A Designação oficial do País é obrigatória"); 
+
             return !ErrorList.Any();
         }
     }

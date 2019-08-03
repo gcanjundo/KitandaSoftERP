@@ -20,6 +20,11 @@ namespace KitandaSoftERP.Domain.Entities.Geral {
         }
         public override bool IsValid()
         {
+            if (string.IsNullOrEmpty(Designation))
+                ErrorList.Add("A Designação oficial da moeda é obrigatória");
+            if (string.IsNullOrEmpty(IsoCode))
+                ErrorList.Add("Informe a Sigla da Moeda");
+
             return !ErrorList.Any();
         }
     }

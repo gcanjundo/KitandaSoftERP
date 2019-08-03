@@ -14,7 +14,7 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
             builder.HasKey(e => new { e.BranchID, e.UserID })
                     .HasName("PRIMARY");
 
-            builder.ToTable("sis_user_filial");
+            builder.ToTable("sysBranchUsers");
 
             builder.HasIndex(e => e.UserID)
                 .HasName("FK_USER_FILIAL_USER");
@@ -22,12 +22,10 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
             builder.HasIndex(e => e.BranchID)
                 .HasName("FK_USER_FILIAL_FILIAL");
 
-            builder.Property(e => e.BranchID)
-                .HasColumnName("FIL_BRANCH_ID")
+            builder.Property(e => e.BranchID) 
                 .HasColumnType("int(11)");
 
-            builder.Property(e => e.ProfileID)
-                .HasColumnName("FIL_USER_ID")
+            builder.Property(e => e.UserID) 
                 .HasColumnType("int(11)");
 
             builder.HasOne(d => d.User)
@@ -41,6 +39,7 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
                .HasConstraintName("FK_USER_BRANCH");
 
             builder.Ignore(t => t.ProfileID);
+            builder.Ignore(t => t.ID);
             builder.Ignore(t => t.ErrorList);
             builder.Ignore(t => t.DesignationOtherLanguage);
             builder.Ignore(t => t.Designation);

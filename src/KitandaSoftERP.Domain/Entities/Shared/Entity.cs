@@ -106,7 +106,7 @@ namespace KitandaSoftERP.Domain.Entities.Shared
         protected void ConfirmaValidacaoEmail()
         {
             if (!IsValidEmailAddress(Email)) ErrorList.Add(string.Format("O E-mail informado é inválido"));
-        }
+        } 
 
     }
 }

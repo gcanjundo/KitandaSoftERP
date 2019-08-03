@@ -11,7 +11,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         {
             ProfileBranchsList = new HashSet<UserProfileBranch>();
             UsersList = new HashSet<User>();
-            UserProfilePermissionsList = new HashSet<UserProfilePermission>();
+            ProfilePermissionsList = new HashSet<UserProfilePermission>();
 
         }
         public int ProfileID { get; set; }   
@@ -19,7 +19,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public bool IsSupervisorPOS { get; set; }
         public virtual ICollection<User> UsersList { get; set; }
         public virtual ICollection<UserProfileBranch> ProfileBranchsList { get; set; }
-        public virtual ICollection<UserProfilePermission> UserProfilePermissionsList { get; set; }
+        public virtual ICollection<UserProfilePermission> ProfilePermissionsList { get; set; }
         public override bool IsValid()
         {
             if (!Email.IsValidEmailAddress(Email.AddressEmail))

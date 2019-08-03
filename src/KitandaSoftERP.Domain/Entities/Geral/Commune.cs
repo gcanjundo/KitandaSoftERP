@@ -24,6 +24,11 @@ namespace KitandaSoftERP.Domain.Entities.Geral
         }
         public override bool IsValid()
         {
+            if (string.IsNullOrEmpty(Designation))
+                ErrorList.Add("A Designação da Comuna ou do Distrito é obrigatória");
+            if (CityID <= 0)
+                ErrorList.Add("Informe o Município a que pertence a Comuna ou Distrito");
+
             return !ErrorList.Any();
         }
     }

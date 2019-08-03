@@ -6,62 +6,63 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
 {
     public class SystemPagesConfiguration : IEntityTypeConfiguration<SystemPages>
     {
-        public void Configure(EntityTypeBuilder<SystemPages> entity)
+        public void Configure(EntityTypeBuilder<SystemPages> builder)
         {
-            entity.HasKey(e => e.ID)
+            builder.HasKey(e => e.ID)
                     .HasName("PRIMARY");
 
-            entity.ToTable("sis_formulario");
+            builder.ToTable("sysModulesPages");
 
-            entity.HasIndex(e => e.ID)
-                .HasName("sys_formulario_PK_SYS_FORMULARIO_ndx");
-
-            entity.HasIndex(e => e.ModuleID)
+            
+            builder.HasIndex(e => e.ModuleID)
                 .HasName("FK_FORMULARIO_MODULO");
 
-            entity.Property(e => e.ID)
-                .HasColumnName("form_codigo")
+            builder.Property(e => e.ID)
+                .HasColumnName("FormID")
                 .HasColumnType("int(11)");
 
-            entity.Property(e => e.ModuleID)
-                .HasColumnName("form_codigo_modulo")
+            builder.Property(e => e.ModuleID) 
                 .HasColumnType("int(11)");
 
-            entity.Property(e => e.Imagem)
-                .HasColumnName("form_imagem")
+            builder.Property(e => e.Imagem) 
                 .HasColumnType("varchar(100)");
 
-            entity.Property(e => e.Indice)
-                .HasColumnName("form_indice")
+            builder.Property(e => e.Indice) 
                 .HasColumnType("int(11)");
 
-            entity.Property(e => e.Link)
-                .HasColumnName("form_link")
+            builder.Property(e => e.Link) 
                 .HasColumnType("varchar(150)");
 
-            entity.Property(e => e.Description)
+            builder.Property(e => e.Description)
                 .IsRequired()
-                .HasColumnName("form_nome")
+                .HasColumnName("FormName")
                 .HasColumnType("varchar(120)");
 
-            entity.Property(e => e.Designation)
+            builder.Property(e => e.Designation)
                 .IsRequired()
-                .HasColumnName("form_titulo")
+                .HasColumnName("FormTitle")
                 .HasColumnType("varchar(120)");
 
-            entity.Property(e => e.DesignationOtherLanguage) 
-                .HasColumnName("form_tituloOtherDesignation")
+            builder.Property(e => e.DesignationOtherLanguage) 
+                .HasColumnName("FormTitleOtherDesignation")
                 .HasColumnType("varchar(120)");
 
-            entity.Property(e => e.TAG)
-                .HasColumnName("form_tag")
-                .HasColumnType("int(11)"); 
+            builder.Property(e => e.TAG) 
+                .HasColumnType("int(11)");
 
-            entity.HasOne(d => d.Module)
+            builder.Property(e => e.Status)
+                .HasColumnType("bit(1)");
+
+            builder.HasOne(d => d.Module)
                 .WithMany(p => p.PagesList)
                 .HasForeignKey(d => d.ModuleID)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("sis_formulario_ibfk_1");
+
+            builder.Ignore(t => t.ErrorList);
+            builder.Ignore(t => t.Notes);
+            builder.Ignore(t => t.BranchID); 
+            builder.Ignore(t => t.ShortName);
         }
     }
 }

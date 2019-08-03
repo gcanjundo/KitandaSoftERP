@@ -12,10 +12,11 @@ namespace KitandaSoftERP.Domain.Entities.Shared
         public string EnterpriseCommericalRegistration { get; set; }
         public int EnterpriseBusinessActivityID { get; set; }
         public virtual BusinessActivity EnterpriseBusinessActivity { get; set; }
-
+        public virtual Branch Branch { get; set; }
         public EntityEnterprise()
         {
             EnterpriseBusinessActivity = new BusinessActivity();
+            Branch = new Branch();
         }
         public override bool IsValid()
         {

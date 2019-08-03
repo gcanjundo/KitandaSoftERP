@@ -17,6 +17,9 @@ namespace KitandaSoftERP.Domain.Entities.Geral
         }
         public override bool IsValid()
         {
+            if (string.IsNullOrEmpty(Designation))
+                ErrorList.Add("A Designação do Documento é obrigatória");
+
             return !ErrorList.Any();
         }
     }

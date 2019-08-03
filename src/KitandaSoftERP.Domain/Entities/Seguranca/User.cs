@@ -24,7 +24,7 @@ namespace KitandaSoftERP.Domain.Entities.Seguranca
         public virtual Profile UserProfile { get; set; }
         public virtual Language Language { get; set; }
         public virtual ICollection<UserProfileBranch> UserBranchesList { get; set; }
-        public virtual ICollection<UserProfilePermission> UserProfilePermissionsList { get; set; }
+        public virtual ICollection<UserProfilePermission> UserPermissionsList { get; set; }
         public virtual CashRegister CashRegister { get; set; }
 
         public User()

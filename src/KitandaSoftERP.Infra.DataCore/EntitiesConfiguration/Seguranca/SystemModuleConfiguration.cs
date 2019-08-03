@@ -9,48 +9,45 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
 {
     public class SystemModuleConfiguration : IEntityTypeConfiguration<SystemModule>
     {
-        public void Configure(EntityTypeBuilder<SystemModule> entity)
+        public void Configure(EntityTypeBuilder<SystemModule> builder)
         {
-            entity.HasKey(e => e.ID)
+            builder.HasKey(e => e.ID)
                     .HasName("PRIMARY");
 
-            entity.ToTable("sis_modulo"); 
+            builder.ToTable("sysModules"); 
 
-            entity.Property(e => e.ID)
-                .HasColumnName("mod_codigo")
+            builder.Property(e => e.ID)
+                .HasColumnName("ModuleID")
                 .HasColumnType("int(11)");
 
-            entity.Property(e => e.ShortName)
-                .HasColumnName("mod_abreviacao")
+            builder.Property(e => e.ShortName) 
                 .HasColumnType("varchar(50)");
 
-            entity.Property(e => e.Designation)
-                .HasColumnName("mod_descricao")
+            builder.Property(e => e.Designation) 
                 .HasColumnType("varchar(120)");
 
-            entity.Property(e => e.DesignationOtherLanguage)
-                .HasColumnName("mod_descricaoOtherLanguage")
+            builder.Property(e => e.DesignationOtherLanguage) 
                 .HasColumnType("varchar(120)");
 
-            entity.Property(e => e.Imagem)
-                .HasColumnName("mod_imagem")
+            builder.Property(e => e.Imagem) 
                 .HasColumnType("varchar(100)");
 
-            entity.Property(e => e.Indice)
-                .HasColumnName("mod_indice")
+            builder.Property(e => e.Indice) 
                 .HasColumnType("int(11)");
 
-            entity.Property(e => e.Link)
-                .HasColumnName("mod_link")
+            builder.Property(e => e.Link) 
                 .HasColumnType("varchar(150)");
 
-            entity.Property(e => e.Status)
-                .HasColumnName("MOD_STATUS")
+            builder.Property(e => e.Status) 
                 .HasColumnType("bit(1)");
 
-            entity.Property(e => e.TAG)
-                .HasColumnName("mod_tag")
+            builder.Property(e => e.TAG) 
                 .HasColumnType("int(11)");
+             
+            builder.Ignore(t => t.ErrorList); 
+            builder.Ignore(t => t.Notes);
+            builder.Ignore(t => t.BranchID); 
+
         }
     }
 }

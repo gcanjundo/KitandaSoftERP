@@ -14,40 +14,30 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
             builder.HasKey(e => e.ID)
                     .HasName("PRIMARY");
 
-            builder.ToTable("sis_perfil");
-
-            builder.HasIndex(e => e.ID)
-                .HasName("sis_perfil_PK_sis_PERFIL_ndx");
+            builder.ToTable("sysProfiles");
+             
 
             builder.Property(e => e.ID)
-                .HasColumnName("per_codigo")
+                .HasColumnName("ProfileID")
                 .HasColumnType("int(11)"); 
 
-            builder.Property(e => e.Description)
-                .HasColumnName("per_descricao")
+            builder.Property(e => e.Description) 
                 .HasColumnType("varchar(255)");
 
-            builder.Property(e => e.Email)
-                .HasColumnName("per_email")
+            builder.Property(e => e.Email) 
                 .HasColumnType("varchar(120)");
 
             builder.Property(e => e.Designation)
-                .IsRequired()
-                .HasColumnName("per_nome")
+                .IsRequired() 
                 .HasColumnType("varchar(120)");
 
-            builder.Property(e => e.DesignationOtherLanguage)
-                .IsRequired()
-                .HasColumnName("per_nome")
+            builder.Property(e => e.DesignationOtherLanguage)  
                 .HasColumnType("varchar(120)");
 
-            builder.Property(e => e.Status)
-                .IsRequired()
-                .HasColumnName("per_status")
+            builder.Property(e => e.Status) 
                 .HasColumnType("bit(1)");
 
-            builder.Property(e => e.IsSupervisorPOS)
-                .HasColumnName("per_supervisor")
+            builder.Property(e => e.IsSupervisorPOS) 
                 .HasColumnType("bit(1)");
 
             builder.Ignore(t => t.ErrorList); 

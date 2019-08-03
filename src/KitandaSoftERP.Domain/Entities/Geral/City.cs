@@ -19,6 +19,11 @@ namespace KitandaSoftERP.Domain.Entities.Geral
         }
         public override bool IsValid()
         {
+            if (string.IsNullOrEmpty(Designation))
+                ErrorList.Add("A Designação do Município é obrigatória");
+            if (ProvinceID <= 0)
+                ErrorList.Add("Informe a Província a que o Município pertence");
+
             return !ErrorList.Any();
         }
     }

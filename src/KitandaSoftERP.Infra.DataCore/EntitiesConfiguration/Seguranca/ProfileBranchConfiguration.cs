@@ -14,7 +14,7 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
             builder.HasKey(e => new { e.BranchID, e.ProfileID })
                     .HasName("PRIMARY");
 
-            builder.ToTable("sis_perfil_filial");
+            builder.ToTable("SysBranchProfiles");
 
             builder.HasIndex(e => e.ProfileID)
                 .HasName("FK_PERFIL_FILIAL_PERFIL");
@@ -22,12 +22,10 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Seguranca
             builder.HasIndex(e => e.BranchID)
                 .HasName("FK_PERFIL_FILIAL_FILIAL");
 
-            builder.Property(e => e.BranchID)
-                .HasColumnName("FIL_CODIGO_EMPRESA")
+            builder.Property(e => e.BranchID) 
                 .HasColumnType("int(11)");
 
-            builder.Property(e => e.ProfileID)
-                .HasColumnName("FIL_CODIGO_PERFIL")
+            builder.Property(e => e.ProfileID) 
                 .HasColumnType("int(11)");
 
             builder.HasOne(d => d.Profile)
