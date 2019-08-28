@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace KitandaSoftERP.Infra.DataCore.DBModels
+{
+    public partial class SisSystemInfo
+    {
+        public string ProductCompanyTaxId { get; set; }
+        public int? SoftwareValidationNumber { get; set; }
+        public string ProductId { get; set; }
+        public string ProductVersion { get; set; }
+    }
+}
