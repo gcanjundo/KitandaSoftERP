@@ -115,11 +115,9 @@ namespace KitandaSoftERP.Infra.DataCore.Context
         public DbSet<StockMovimentItems> StockMoviment { get; set; }
         public DbSet<StockMovimentItems> StockMovimentItems { get; set; }
         public DbSet<Warehouse> Warehouse { get; set; }
-        public DbSet<WarehousePermission> WarehousePermission { get; set; }
-
+        public DbSet<WarehousePermission> WarehousePermission { get; set; } 
         //Accounts
-        public DbSet<GeneralAccountPlan> GeneralAccountPlan { get; set; }
-
+        public DbSet<GeneralAccountPlan> GeneralAccountPlan { get; set; } 
         //Tresure
         public DbSet<BankEntities> Banks { get; set; }
         public DbSet<BankAccounts> BankAccounts { get; set; }

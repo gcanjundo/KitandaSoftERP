@@ -14,7 +14,7 @@ namespace KitandaSoftERP.Infra.DataCore.EntitiesConfiguration.Geral
             builder.HasKey(e => e.ID)
                     .HasName("PRIMARY");
 
-            builder.ToTable("ger_viatura");
+            builder.ToTable("ger_Vehicles");
 
             builder.HasIndex(e => e.VehicleCategoryID)
                 .HasName("FK_VIATURA_CATEGORIA_ID");
