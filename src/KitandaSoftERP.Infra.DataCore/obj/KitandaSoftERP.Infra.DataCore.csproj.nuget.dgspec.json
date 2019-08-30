@@ -1,0 +1,210 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Infra.DataCore\\KitandaSoftERP.Infra.DataCore.csproj": {}
+  },
+  "projects": {
+    "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain.Shared\\KitandaSoftERP.Domain.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain.Shared\\KitandaSoftERP.Domain.Shared.csproj",
+        "projectName": "KitandaSoftERP.Domain.Shared",
+        "projectPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain.Shared\\KitandaSoftERP.Domain.Shared.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain\\KitandaSoftERP.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain\\KitandaSoftERP.Domain.csproj",
+        "projectName": "KitandaSoftERP.Domain",
+        "projectPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain\\KitandaSoftERP.Domain.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain.Shared\\KitandaSoftERP.Domain.Shared.csproj": {
+                "projectPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain.Shared\\KitandaSoftERP.Domain.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Infra.DataCore\\KitandaSoftERP.Infra.DataCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Infra.DataCore\\KitandaSoftERP.Infra.DataCore.csproj",
+        "projectName": "KitandaSoftERP.Infra.DataCore",
+        "projectPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Infra.DataCore\\KitandaSoftERP.Infra.DataCore.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Infra.DataCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain\\KitandaSoftERP.Domain.csproj": {
+                "projectPath": "C:\\LucanSoft\\kitanda20\\gcanjundo\\KitandaSoftERP\\src\\KitandaSoftERP.Domain\\KitandaSoftERP.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.60.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "System.Data.Common": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
